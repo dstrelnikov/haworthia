@@ -1,0 +1,17 @@
+ul.project-list {
+	padding: 0;
+	list-style: none;
+
+	.project-item {
+		margin-bottom: .5rem;
+
+		a {
+			color: $color-text;
+			text-decoration: underline;
+		}
+
+		p {
+			display: inline;
+		}
+  }
+}

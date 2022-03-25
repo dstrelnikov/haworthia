@@ -1,0 +1,16 @@
+body {
+	display: block;
+	position: relative;
+	min-height: 100%;
+	max-width: 48rem;
+	margin: 0 auto;
+	padding: 0 5px;
+	background-color: #fafafa;
+
+	font-weight: 400;
+	font-size: 14px;
+	font-family: "IBM Plex Mono", monospace;
+	line-height: 1.725;
+	text-rendering: geometricPrecision;
+	color: $color-text;
+}

@@ -1,0 +1,16 @@
+pre {
+	padding: 1em;
+	border-radius: .5em;
+	overflow-x: auto;
+	background-color: $color-code-bg;
+	color: $color-code;
+}
+
+p {
+	code {
+		background-color: $color-code-bg;
+		color: $color-code;
+		padding: .2em;
+		border-radius: .2em;
+	}
+}

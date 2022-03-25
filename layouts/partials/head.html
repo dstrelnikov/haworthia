@@ -1,0 +1,21 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="white">
+	<title>{{ if .IsPage }} {{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+
+	<link rel="canonical" href="{{ .Permalink }}">
+
+	<!-- style -->
+	<!-- <link rel="shortcut icon" type="image/png" href="{{ "img/ico/favicon.ico"  | absURL }}" /> -->
+	<!-- <link rel="shortcut icon" href="img/ico/favicon.ico"  type="image/x-icon"> -->
+	{{ $style := resources.Get "scss/style.scss" | resources.ToCSS }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}"> 
+	<!-- style -->
+
+	{{ with .Site.Params.description }} <meta name="description" content="{{ . }}"> {{ end }}
+	<meta name="description" content="{{ .Site.Params.description }}">
+
+	<meta name="robots" content="all,follow">
+	<meta name="googlebot" content="index,follow,snippet,archive">
+</head>

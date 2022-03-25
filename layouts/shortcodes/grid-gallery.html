@@ -1,0 +1,18 @@
+<figure>
+	<div class=grid-gallery>
+		{{- range .Page.Resources.Match (.Get "pattern") -}}
+			{{- $image := . -}}
+			{{- $image_url := .RelPermalink -}}
+			{{- $image_resized := .Resize "600x q90" -}}
+			{{- $image_resized_url := $image_resized.RelPermalink -}}
+			<a href="{{ $image_url }}" target="_blank">
+				<img src="{{ $image_resized_url }}">
+			</a>
+		{{ end }}
+	</div>
+	{{ if (.Get "caption") }}
+	<figcaption>
+		<h4>{{ .Get "caption" }}</h4>
+	</figcaption>
+	{{ end }}
+</figure>

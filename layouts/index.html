@@ -1,0 +1,29 @@
+{{ define "main" }}
+<main>
+	<section>
+		<p> {{ .Site.Params.description | $.Page.RenderString }} </p>
+	</section>
+	<section id="last-posts">
+		<h1>Blog updates</h1>
+		<ul class="post-list">
+			{{
+				range
+					first (.Site.Params.blogUpdatesNo | default 5)
+						(where .Site.RegularPages "Section" "blog")
+			}}
+				{{- partial "post-item.html" . -}}
+			{{ end }}
+		</ul>
+	</section>
+	<section id="selected-projects">
+		<h1>Featured projects</h1>
+		<ul class="project-list">
+			{{ range .Site.Data.projects.list }}
+			<li class="project-item">
+				<a href="{{ .url }}">{{ .name }}</a>: {{ .desc | markdownify }}
+			</li>
+			{{ end }}
+		</ul>
+	</section>
+</main>
+{{ end }}

@@ -1,0 +1,30 @@
+footer {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 5px;  /* hack needed because of absolute positioning */
+	right: 5px; /* hack needed because of absolute positioning */
+	// box-sizing: border-box;
+
+	font-size: 11px;
+	padding: 20px 5px;
+	border-top: 1px solid;
+	border-color: #dcdcdc;
+	color: $color-text-light;
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto; 
+
+
+	a {
+		color: inherit;
+	}
+
+	a#up {
+		margin: 0;
+		padding: 0;
+		float: right;
+		text-decoration: none;
+	}
+}
+

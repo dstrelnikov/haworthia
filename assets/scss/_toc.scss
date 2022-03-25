@@ -1,0 +1,40 @@
+main aside {
+	display: block;
+	position: absolute;
+	left: -18rem;
+	width: 16rem;
+	height: 100%;
+
+	a {
+		color: $color-text-light;
+		text-decoration: none;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	nav#TableOfContents {
+		display: block;
+		position: sticky;
+		font-size: 12px;
+		top: 0;
+		height: 100vh;
+		overflow-y: auto;
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding-left: 0;
+
+			ul {
+				padding: 0;
+				padding-left: 15px;
+			}
+		}
+	}
+
+	@media (max-width: 1366px) {
+		display: none;
+	}
+}

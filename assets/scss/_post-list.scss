@@ -1,0 +1,43 @@
+ul.post-list {
+	padding: 0;
+	list-style-type: none;
+
+	li.post-item {
+		display: flex;
+		margin-bottom: .5rem;
+		margin-left: 0;
+		text-align: left;
+
+		@media (max-width: 650px) {
+			display: block;
+			margin-bottom: 1rem;
+		}
+
+		time {
+			display: inline-block;
+			flex: initial;
+			vertical-align: top;
+			width: auto;
+			white-space: nowrap;
+			margin-right: 1rem;
+			color: $color-text-light;
+		}
+
+		div.post-container {
+			@media (max-width: 650px) {
+				width: 100%;
+			}
+
+			a.post-title {
+				display: inline;
+				color: $color-text;
+				text-decoration: underline;
+				margin-right: .5rem;
+
+				@media (max-width: 650px) {
+					display: block;
+				}
+			}
+		}
+	}
+}

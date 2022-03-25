@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main>
+	<aside>
+		{{ .TableOfContents }}
+	</aside>
+	<article>
+		<header>
+			<h1> {{ .Title }} </h1>
+			<time datetime="{{ .Date }}" itemprop="datePublished">
+				{{ .Date.Format "2006-01-02" }}
+			</time>
+		</header>
+		{{ .Content }}
+	</article>
+</main>
+{{ end }}

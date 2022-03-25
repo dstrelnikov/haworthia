@@ -1,0 +1,37 @@
+article {
+
+	header {
+		padding-bottom: 1rem;
+		border-color: #dcdcdc;
+
+		h1 {
+			color: $color-accent;
+		}
+
+		time {
+			color: $color-text-light;
+		}
+	}
+
+	figure {
+		margin: 0 -5px; /* compensate body padding */
+
+		figcaption {
+			margin: 0 5px;
+			text-align: center;
+
+			h4 {
+				// https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/shortcodes/figure.html/templates/shortcodes/figure.html
+				margin-top: 0;
+			}
+		}
+		img {
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+
+	ul {
+		padding-left: 20px;
+	}
+}
