@@ -22,6 +22,23 @@ ul {
 	list-style-type: square;
 }
 
+.h-anchor {
+	font-weight: 300;
+	color: $color-text-very-light;
+	text-decoration: none;
+	display: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	&:hover .h-anchor {
+		display: inline;
+	}
+}
+
 h1 {
 	font-size: 1.4rem;
 	margin-top: 2.0rem;
