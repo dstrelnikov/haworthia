@@ -1,5 +1,5 @@
 article {
-
+	// article metadata
 	header {
 		padding-bottom: 1rem;
 		border-color: #dcdcdc;
@@ -8,8 +8,16 @@ article {
 			color: $color-accent;
 		}
 
-		time {
+		.post-metainfo {
 			color: $color-text-light;
+
+			time {
+				display: block;
+			}
+
+			ul.tag-list {
+				display: inline-block;
+			}
 		}
 	}
 

@@ -1,12 +1,15 @@
 @import	'colors';
 @import	'common';
+
 @import	'header';
-@import	'body';
+@import	'main';
+	@import	'article';
 @import	'footer';
-@import	'toc';
-@import	'article';
+
+// features
 @import	'code';
 @import	'grid-gallery';
+@import	'h-anchor';
 
 // lists
 @import	'post-list';

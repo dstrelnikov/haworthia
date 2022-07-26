@@ -4,12 +4,6 @@
 	</time>
 	<div class="post-container">
 	<a class="post-title" href="{{ .Permalink }}"> {{- .Title | default "Untitled" -}} </a>
-	<ul class="tag-list">
-		{{ range .Params.tags }}
-			<li class="tag">
-				<a href="/tags/{{ . | urlize }}"> #{{- . -}} </a>
-			</li>
-		{{ end }}
-	</ul>
+	{{ partial "post-tags.html" . }}
 	</div>
 </li>

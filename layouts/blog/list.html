@@ -1,0 +1,34 @@
+{{ define "main"}}
+<main>
+	<section>
+		<h1>
+			Blog index
+			{{ if .Page.Data.Term }} |
+				{{ with .Page.Data.Term}}
+				<a href="/tags/{{ . | urlize }}"> #{{ . }} </a>
+				{{end}}
+			{{ end }}
+		</h1>
+		{{ range .Pages.GroupByDate "2006" }}
+			<section>
+				<h3> {{ .Key }} </h3>
+				<ul class="post-list">
+					{{ range .Pages }}
+						{{- partial "post-item.html" . -}}
+					{{ end }}
+				</ul>
+			</section>
+		{{ end }}
+		<section>
+			<h3>All tags</h3>
+			<ul class="tag-list">
+				{{ range .Site.Taxonomies.tags.ByCount }}
+					<li class="tag">
+						<a href="{{ .Page.Permalink }}"> #{{ .Page.Title }}({{ .Count }})</a>
+					</li>
+				{{ end }}
+			</ul>
+		</section>
+	</section>
+</main>
+{{ end }}
